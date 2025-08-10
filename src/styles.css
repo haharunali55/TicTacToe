@@ -20,7 +20,7 @@ h2 {
 
 h3 {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 h4 {
@@ -57,8 +57,8 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #f4f4f4;
+  border: 5px solid #747272;
   float: left;
   font-size: 124px;
   font-weight: bold;
@@ -73,9 +73,9 @@ body {
 
 .square-x {
   /* background-color: lightyellow; */
-  background: white;
+  background: #f4f4f4;
   color: black;
-  border: 1px solid #999;
+  border: 5px solid #747272;
   float: left;
   font-size: 124px;
   font-weight: bold;
@@ -90,9 +90,9 @@ body {
 
 .square-o {
   /*background-color: lightblue;*/
-  background: white;
+  background: #f4f4f4;
   color: black;
-  border: 1px solid #999;
+  border: 5px solid #747272;
   float: left;
   font-size: 124px;
   font-weight: bold;
@@ -108,7 +108,7 @@ body {
 .square-striked {
   background-color: lightgreen ;
   text-decoration: line-through;
-  border: 1px solid #999;
+  border: 5px solid #747272;
   float: left;
   font-size: 124px;
   font-weight: bold;
@@ -157,4 +157,60 @@ body {
   justify-content: center; /* Horizontally centers items */
   align-items: center; /* Vertically centers items */
   /*height: 100vh; /* Example: full viewport height for vertical centering on page */
+}
+
+/* .button{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+} */
+
+.button {
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  /* background-color:#FFA12B; */
+  background-color:grey;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 rgb(220, 216, 216), 0 10px 0 rgb(74, 73, 73);
+  -moz-box-shadow:inset 0 1px 0 rgb(220, 216, 216), 0 10px 0 rgb(74, 73, 73);
+  box-shadow:inset 0 1px 0 rgb(220, 216, 216), 0 10px 0 rgb(74, 73, 73);
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button:active{
+  top:10px;
+  background-color:lightgrey;
+  
+  -webkit-box-shadow:inset 0 1px 0 rgb(220, 216, 216), inset 0 -3px 0 rgb(74, 73, 73);
+  -moz-box-shadow:inset 0 1px 0 rgb(220, 216, 216), inset 0 -3pxpx 0 rgb(74, 73, 73);
+  box-shadow:inset 0 1px 0 rgb(220, 216, 216), inset 0 -3px 0 rgb(74, 73, 73);
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

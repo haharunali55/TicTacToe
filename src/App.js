@@ -50,6 +50,12 @@ export default function Board() {
       setTimeout(() => {
         alert(`Winner is: ${squares[winningCombination[0]]}`);
       }, 100);
+      return;
+    }
+    else if(!squares.includes(null)) {
+      setTimeout(() => {
+        alert(`Game Over! It's a draw!`);
+      }, 100);
     }
   }, [winningCombination]);
 
@@ -59,9 +65,8 @@ export default function Board() {
         setWinningCombination(winningCombination);
         return;
       }
-
-      if(!squares.includes(null)) {
-        alert("Game Over! It's a draw!");
+      else {
+        setWinningCombination([]);
       }
   }
 
@@ -90,7 +95,9 @@ export default function Board() {
     <>
       <div className="parent-container">
         <h1>Tic Tac Toe</h1>
-        <div style={{marginBottom: "20px"}}>Next turn : Player {xIsNext?"X":"O"}</div>
+        <div style={{marginBottom: "20px"}}>
+          <h3>Next turn : Player {xIsNext?"X":"O"}</h3>
+        </div>
         <div>
           <div className="board-row">
             <Square value={squares[0]} onSquareClick={() => {handleClick(0)}} isWinner={winningCombination.includes(0) ? true : false}/> 
@@ -109,7 +116,7 @@ export default function Board() {
           </div>
         </div>
         <div style={{marginTop: "20px"}}>
-          <button onClick={() => { setSquares(Array(9).fill(null)); setXIsNext(true); setWinningCombination([]); }}>Reset</button>
+          <button className="button" onClick={() => { setSquares(Array(9).fill(null)); setXIsNext(true); setWinningCombination([]); }}>Reset</button>
         </div>
       </div>
     </>

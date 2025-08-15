@@ -26,6 +26,7 @@ To run the game in your local, follow the below steps :
 4. Once setup is done, you will be asked to open a browser and navigate to http://localhost:3000 to play the game.
 
 Some screenshots for reference :
+
 1.The game
 
 <img width="647" height="789" alt="Screenshot 2025-08-15 at 12 40 41 PM" src="https://github.com/user-attachments/assets/84c1aaad-138b-4bf0-982f-cd2777c4022d" />

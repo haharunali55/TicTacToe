@@ -122,18 +122,6 @@ export default function Board() {
   }, [squares]);
 
   useEffect(() => {
-    if(winningCombination.length > 0) {
-      setTimeout(() => {
-        alert(`Winner is: ${squares[winningCombination[0]]}`);
-      }, 100);
-      return;
-    }
-    else if(!squares.includes(null)) {
-      setTimeout(() => {
-        alert(`Game Over! It's a draw!`);
-      }, 100);
-    }
-    
     if(isSinglePlayer && !xIsNext && winningCombination.length === 0) {
       // Logic for computer's turn in single player mode
       let bestIndex = getBestIndex(squares);
@@ -219,7 +207,7 @@ export default function Board() {
             <Square value={squares[8]} onSquareClick={() => {handleClick(8)}} isWinner={winningCombination.includes(8) ? true : false}/> 
           </div>
         </div>
-        
+
         <div style={{marginTop: "20px"}}>
           <button className="button" onClick={() => { setSquares(Array(9).fill(null)); setXIsNext(true); setWinningCombination([]); setIsSPDisabled(false); setIsMPDisabled(false); setIsSinglePlayer(false); }}>Reset</button>
         </div>
